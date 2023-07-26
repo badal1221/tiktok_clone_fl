@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone_f/constants.dart';
+import 'package:tiktok_clone_f/views/screens/auth/sign_up_screen.dart';
 import 'package:tiktok_clone_f/views/widgets/text_input_field.dart';
 class LoginScreen extends StatelessWidget {
    LoginScreen({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class LoginScreen extends StatelessWidget {
               fontSize: 35,
               color: buttonColor
             ),),
-            Text('Login',style: TextStyle(
+            const Text('Login',style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 25,
             ),),
@@ -55,8 +56,8 @@ class LoginScreen extends StatelessWidget {
               child:InkWell(
                 onTap:()=>authController.loginUser(_emailController.text,
                     _passwordController.text),
-                child: Center(
-                  child: const Text('Login',style: TextStyle(
+                child:const Center(
+                  child: Text('Login',style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w700
                   ),),
@@ -69,7 +70,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const Text('Don\'t have an account?',style: TextStyle(fontSize: 20,),),
                 InkWell(
-                  onTap:(){},
+                  onTap:()=>Navigator.of(context).push(MaterialPageRoute(builder:(context)=>SignUpScreen())),
                     child: Text('Register',style: TextStyle(
                         fontSize: 20,color: buttonColor),
                     ),

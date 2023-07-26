@@ -88,7 +88,7 @@ class VideoScreen extends StatelessWidget {
                 Column(
                   children: [
                     const SizedBox(
-                      height: 100,
+                      height: 170,
                     ),
                     Expanded(
                       child: Row(
@@ -145,7 +145,7 @@ class VideoScreen extends StatelessWidget {
                             width: 100,
                             margin: EdgeInsets.only(top: size.height / 5),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 buildProfile(
                                   data.profilePhoto,
